@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Menu from './../Menu/Menu';
 import routes from '../../routers';
-import { BrowserRouter as Router,Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, HashRouter, Route, Switch } from 'react-router-dom';
 class App extends Component {
 	showContentMenu = (routes) => {
 		var result = null;
@@ -19,7 +19,7 @@ class App extends Component {
 	}
  	render() {
 		return (     
-			<Router>
+			<HashRouter>
 				<div>
 					<Menu/>
 					<div className="container">				
@@ -28,7 +28,7 @@ class App extends Component {
 						</div>
 					</div>
 				</div>
-			</Router>
+			</HashRouter>
 		);
   	}
 }
